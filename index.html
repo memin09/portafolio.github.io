@@ -12,267 +12,293 @@
 <body>
 
   <header>
-    <div class="logo">{ B }</div>
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <a href="#sobre-mi" class="logo">&lt;BC /&gt;</a>
+    
+    <button class="menu-toggle" id="menu-btn" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
     </button>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Herramientas</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#certificates">Certificados</a></li>
-        <li class="social-icons">
-          <a href="https://github.com/memin09"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/benjamin.castaneda.79656?igsh=ZXEyc3JleHNwcmp6&utm_source=qr"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li><a href="#contact" class="contact-btn">Contacto</a></li>
-      </ul>
+
+    <nav id="menu-nav">
+        <a href="#sobre-mi" class="active">Sobre Mi</a>
+        <a href="#stack">Stack</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h3>Bienvenido a mi portafolio</h3>
-      <br>
-      <br>
-      <h1>¡Hola! Soy Benjamin <span>Backend Developer</span></h1>
-    </div>
-    <div class="hero-img">
-      <img src="img/Astronauta.png" alt="Astronaut">
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="img/fotoPortafolio.png" alt="Sobre mí imagen">
-    </div>
-    <div class="about-text">
-      <h2>Sobre mí</h2>
-      <p>
-        Hola, mi nombre es Benjamin Castañeda López, soy desarrollador Back End especializado en Java. Mi pasión por el desarrollo de software comenzó desde pequeño, lo que me ha llevado a realizar diversos proyectos personales y académicos utilizando tanto tecnologías Front End como Back End.
+    <div class="nav-right"></div>
+</header>
 
-Mi experiencia se centra principalmente en Java y Spring Boot, donde he desarrollado APIs REST y he trabajado con arquitectura de microservicios. Tengo conocimientos en patrones de diseño.
-
-Actualmente, me encuentro cursando el Séptimo semestre  de la carrera de Tecnologías de la Información y Comunicación (TIC's) en el Instituto Tecnológico de Apizaco, donde continúo ampliando mis conocimientos y habilidades en el campo del desarrollo de software.
-      </p>
-    </div>
-  </section>
-  <section class="skills" id="skills">
-    <h2>Tecnologías y Herramientas</h2>
-    <h3>Habilidades</h3>
-    <div class="skills-grid">
-      <div class="skills-row">
-  <div class="skill-card">
-    <h4>HTML</h4>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
-    <p>Intermedio</p>
-  </div>
-
-  <div class="skill-card">
-    <h4>CSS</h4>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
-    <p>Intermedio</p>
-  </div>
-
-  <div class="skill-card">
-    <h4>JavaScript</h4>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-    <p>Intermedio</p>
-  </div>
-
-  <div class="skill-card">
-    <h4>Java</h4>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>
-    <p>Avanzado</p>
-  </div>
-
-   <div class="skill-card"><h4>GitHub</h4><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/><p>Avanzado</p></div>
-        <div class="skill-card"><h4>MySQL</h4><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/><p>Avanzado</p></div>
-</div>
-      <div class="skills-row">
-         <div class="skill-card">
-    <h4>Spring Boot</h4>
-    <img src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot"/>
-    <p>Avanzado</p>
-  </div>
-
-        <div class="skill-card">
-  <h4>Spring Cloud</h4>
-  <img src="https://spring.io/img/projects/spring-cloud.svg" alt="Spring Cloud"/>
-  <p>Avanzado</p>
-</div>
-<div class="skill-card">
-    <h4>Spring Security</h4>
-    <img src="https://spring.io/img/projects/spring-security.svg" alt="Spring Security"/>
-    <p>Intermedio</p>
-  </div>
+<section class="container" id="sobre-mi">
+    <div class="content-left">
+        <div class="section-tag" style="text-align: left;">Sobre Mí</div>
+        <h1 class="main-name">Benjamin <span>Castañeda</span></h1>
         
-        <div class="skill-card">
-  <h4>JWT</h4>
-   <img src="https://jwt.io/img/pic_logo.svg">
-  <p>Intermedio</p>
-</div>
-      </div>
-      <div class="skills-row">
-      <div class="skill-card">
-  <h4>Docker</h4>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>
-  <p>Intermedio</p>
-</div>
-
-<div class="skill-card">
-  <h4>Postman</h4>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"/>
-  <p>Intermedio</p>
-</div>  
-      </div>
-    </div>
-  </section>
-  
-  <section class="certificates" id="certificates">
-    <h2>Certificados y Reconocimientos</h2>
-    <div class="certificates-container">
-      <div class="cert-carousel">
-        <div class="cert-track">
-          <div class="cert-item"><img src="img/microservicios.png" alt="Certificado 1"></div>
-          <div class="cert-item"><img src="img/SpringBoot.png" alt="Certificado 2"></div>
-          <div class="cert-item"><img src="img/gerradecodigo.png" alt="Certificado 3"></div>
+        <p class="description">
+         <strong>Desarrollador Backend</strong> especializado en el desarrollo de <strong>soluciones escalables y mantenibles</strong> utilizando <strong>Java</strong> y <strong>Spring Boot</strong>. Experiencia en el diseño e implementación de <strong>APIs REST</strong>, integración con bases de datos <strong>MySQL</strong> y <strong>PostgreSQL</strong>, y control de versiones mediante <strong>Git</strong>. Familiarizado con metodologías ágiles como <strong>Scrum</strong>, aplicando <strong>buenas prácticas de desarrollo</strong>, <strong>código limpio</strong> y <strong>arquitecturas orientadas a servicios</strong> para construir <strong>aplicaciones robustas y eficientes</strong>. Actualmente curso el <strong>7.º semestre de Ingeniería en Tecnologías de la Información y Comunicaciones</strong> en el <strong>Instituto Tecnológico de Apizaco</strong>, fortaleciendo continuamente mis habilidades técnicas y profesionales.
+        </p>
+        
+        <div class="actions-row">
+            <div class="social-container">
+                <div class="social-title">Redes</div>
+                <div class="social-icons">
+                    <a href="https://github.com/memin09" class="icon-wrapper"><div class="icon-box"><i class="fa-brands fa-github"></i></div><span>GitHub</span></a>
+                    <a href="https://www.instagram.com/benjamin.castaneda.79656?igsh=ZXEyc3JleHNwcmp6&utm_source=qr" class="icon-wrapper">
+                        <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            <a href="/CV_Benjamin_Castañeda_Lopez_Desarrollador_Backend.pdf" class="cv-button">
+                <span>Descargar CV</span>
+                <i class="fa-solid fa-download"></i>
+            </a>
         </div>
-      </div>
     </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2>Mis Proyectos</h2>
-    <div class="cards-container">
-      <!-- Card 1: Mr.Sport JC (vertical) -->
-      <div class="card vertical">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/TituloOficial .png" alt="Logo Veterinaria">
-            <button class="toggle-btn">+</button>
-          </div>
-          <div class="card-back">
-            <h3>Mr.Sport JC</h3>
-            <p>Pagina web para la venta de productos deportivos - Mayo. 2025 - Agosto. 2025</p>
-            <div class="techs">
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</div>
-            </div>
-            <div class="techs">
-              <div><img src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot"/>spring Boot</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">MySQL</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>Docker</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/memin09/Mr.Sport-Jc.git" class="btn-proyecto" target="_blank">
-                <i class="fab fa-github"></i> Código
-              </a>
-            </div>
-            <button class="toggle-btn">-</button>
-          </div>
+    <div class="content-right">
+        <div class="profile-img-container">
+            <img src="img/fotoPortafolio.png" alt="Benjamin Castañeda">
         </div>
-      </div>
-
-      <!-- Card 2: Vhelth. (horizontal) -->
-      <div class="card horizontal">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/logoVheakt.png" alt="Logo Agua">
-            <button class="toggle-btn">+</button>
-          </div>
-          <div class="card-back">
-            <h3>Vhelth.</h3>
-            <p>Sistema de servicio medico a domicilio - Marzo. 2025 - Julio 2025</p>
-            <div class="techs">
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</div>
-              <div><img src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot"/>spring Boot</div>
-              <div><img src="img/spring-ai.svg" alt="AI"/>Spring AI</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">MySQL</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>Docker</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>Git</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/memin09/api-clinica-tec.git" class="btn-proyecto" target="_blank">
-                <i class="fab fa-github"></i> Código
-              </a>
-            </div>
-            <button class="toggle-btn">-</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3: Nuevo proyecto (full-width) -->
-      <div class="card full-width">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/logonutricroc2.png" alt="Inventario">
-            <button class="toggle-btn">+</button>
-          </div>
-          <div class="card-back">
-            <h3>Nutricroc</h3>
-            <p>Sistema web desarrollado para la gestión del inventario de postres y snacks nutritivos, permitiendo administrar productos, existencias y ventas en línea de forma eficiente.</p>
-            <div class="techs">
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>Java</div>
-              <div><img src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot"/>Spring Boot</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Security"/>Spring Security</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>MySQL</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>Docker</div>
-              <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>Git</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/memin09/Api-Nutricroc" class="btn-proyecto" target="_blank">
-                <i class="fab fa-github"></i> Código
-              </a>
-              <a href="https://memin09.github.io/nutricroc.github.io/" class="btn-proyecto btn-visitar" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Visitar sitio
-              </a>
-            </div>
-            <button class="toggle-btn">-</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section class="contact" id="contact">
-    <h2>Contacto</h2>
-    <div class="form-container">
-      <h3>Contáctame</h3>
-      <form id="contactForm">
-        <div class="input-row">
-          <input type="text" id="nombre" placeholder="Nombre" required>
-          <input type="email" id="email" placeholder="Correo" required>
+<section class="stack-section" id="stack">
+    <div class="section-tag">Stack</div>
+    <h2 class="section-title-main">Stack <span> Tecnológico</span></h2>
+    <div class="section-subtitle">Tecnologías y herramientas con las que desarrollo soluciones</div>
+    
+    <div class="stack-grid">
+        <div class="stack-card">
+            <h3 class="card-title">Especialización Principal</h3>
+            <p class="card-desc">Desarrollo backend orientado a aplicaciones escalables, APIs REST, arquitectura limpia y buenas prácticas.</p>
+            <div class="badges-container">
+                <div class="tech-badge"><i class="devicon-java-plain c-java"></i> Java</div>
+                <div class="tech-badge"><i class="devicon-spring-original c-spring"></i> Spring Boot</div>
+                <div class="tech-badge"><i class="devicon-hibernate-plain c-hibernate"></i> Hibernate</div>
+                <div class="tech-badge"><i class="fa-solid fa-database c-db"></i> SQL</div>
+                <div class="tech-badge"><i class="devicon-mysql-original c-db"></i> MySQL</div>
+                <div class="tech-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+            </div>
         </div>
-        <textarea id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-        <button type="submit" class="submit-btn" id="submitBtn">
-          <span id="btnText">ENVIAR</span>
-          <div class="button-loader" id="btnLoader">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </button>
-      </form>
-    </div>
 
-    <div class="modal" id="modalExito">
-      <div class="modal-content">
-        <h3>¡Mensaje enviado con éxito!</h3>
-      </div>
+        <div class="stack-card">
+            <h3 class="card-title">Frontend & UI</h3>
+            <p class="card-desc">Construcción de interfaces modernas, responsive y mantenibles, priorizando rendimiento y experiencia de usuario.</p>
+            <div class="badges-container">
+                <div class="tech-badge"><i class="devicon-javascript-plain c-js"></i> JavaScript</div>
+                <div class="tech-badge"><i class="devicon-html5-plain c-html"></i> HTML5</div>
+                <div class="tech-badge"><i class="devicon-css3-plain c-css"></i> CSS3</div>
+                <div class="tech-badge"><i class="devicon-bootstrap-plain c-bootstrap"></i> Bootstrap</div>
+            </div>
+        </div>
+
+        <div class="stack-card">
+            <h3 class="card-title">Conocimientos Complementarios</h3>
+            <p class="card-desc">Conocimientos en arquitectura de microservicios con Spring Cloud, incluyendo componentes como Eureka, Spring Cloud Gateway, Config Server y Load Balancer, además de experiencia en el desarrollo de aplicaciones seguras con Spring Security y en la integración de funcionalidades basadas en inteligencia artificial mediante Spring AI.</p>
+            <div class="badges-container">
+                <div class="tech-badge"><img src="https://spring.io/img/projects/spring-cloud.svg" width="20" height="20"> Spring Cloud</div>
+                <div class="tech-badge"><img src="https://spring.io/img/projects/spring-security.svg" width="20" height="20"> Spring Security</div>
+                <div class="tech-badge"><img src="img/spring-ai.svg" width="20" height="20"> Spring AI</div>
+            </div>
+        </div>
+
+        <div class="stack-card">
+            <h3 class="card-title">Metodologías & Herramientas</h3>
+            <p class="card-desc">Experiencia en el uso de herramientas para el desarrollo de software, control de versiones y conocimientos en metodologías ágiles.</p>
+            <div class="badges-container">
+                <div class="tech-badge"><i class="devicon-git-plain c-git"></i> Git</div>
+                <div class="tech-badge"><i class="devicon-github-original"></i> GitHub</div>
+                <div class="tech-badge"><i class="devicon-postman-plain c-postman"></i> Postman</div>
+                <div class="tech-badge"><i class="devicon-mysql-original c-db"></i> MySQL Workbench</div>
+                <div class="tech-badge">Scrum (nivel básico)</div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+
+<section class="projects-section" id="proyectos">
+    <div class="section-tag">Proyectos</div>
+    <h2 class="section-title-main">Mis <span>Proyectos</span></h2>
+    <div class="section-subtitle">Sistemas avanzados desarrollados de punta a punta</div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-preview">
+                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="carousel-track">
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                     <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-Producto.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-detalle-producto.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-Carrito.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-metodo-de-pago.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/panel-de-control.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/panel-administrativo-productos.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/editar-producto.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-cuenta-resumen.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0f172a 0%, #0f2d4a 100%); border-bottom: 1px solid #1e293b;"><img src="img/Nutricroc-cuenta-pedidos.png" class="carousel-slide-img" alt="NutriCroc"></div>
+                
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="project-info">
+                <h3>NutriCroc</h3>
+                <p class="project-desc">Plataforma web para la venta de postres y snacks nutritivos dentro de una institución educativa. Permite realizar pedidos en línea, gestionar el carrito de compras y pagar en efectivo o con tarjeta de débito mediante una experiencia rápida y segura.</p>
+                <div class="project-tags">
+                    <span class="project-tag-mini">Java</span><span class="project-tag-mini">Spring Boot</span><span class="project-tag-mini">Spring Security</span><span class="project-tag-mini">Hibernate</span><span class="project-tag-mini">MySQL</span><span class="project-tag-mini">Html</span><span class="project-tag-mini">Css</span><span class="project-tag-mini">JavaScript</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="https://memin09.github.io/nutricroc.github.io/" class="p-btn demo"><i class="fa-regular fa-circle-play"></i> Demo</a>
+                    <a href="https://github.com/memin09/Api-Nutricroc" class="p-btn code"><i class="fa-solid fa-code"></i> Código</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview">
+                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="carousel-track">
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #060f14 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSport.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSport-Registrar.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSportLogin.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSportProductos.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSportBalones.png" class="carousel-slide-img" alt="MrSport"></div>
+                <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSport-producto.png" class="carousel-slide-img" alt="MrSport"></div>
+                <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/MrSportCart.png" class="carousel-slide-img" alt="MrSport"></div>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="project-info">
+                <h3>MrSport API</h3>
+                <p class="project-desc">API REST desarrollada para gestionar una tienda de artículos deportivos. Implementa la lógica de negocio para la administración de productos, autenticación de usuarios, control de inventario, procesamiento de compras en línea y gestión de pedidos, siguiendo una arquitectura escalable y buenas prácticas de desarrollo.</p>
+                <div class="project-tags">
+                    <span class="project-tag-mini">Java</span><span class="project-tag-mini">Spring Boot</span><span class="project-tag-mini">Hibernate</span><span class="project-tag-mini">MySQL</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="p-btn demo disabled-btn" onclick="event.preventDefault();"><i class="fa-solid fa-lock"></i> Demo</a>
+                    <a href="#" class="p-btn code disabled-btn" onclick="event.preventDefault();"><i class="fa-solid fa-lock"></i> Código</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview">
+                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="carousel-track">
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #060f14 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/vhelth.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/sobrenosotros.jpeg" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/Beneficio y servicios.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/chat.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/chatmsg.jpeg" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/Registrarse.png" class="carousel-slide-img" alt="MrSport"></div>
+                <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/citasmedicas.png" class="carousel-slide-img" alt="MrSport"></div>
+                    <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/metodos de pago.png" class="carousel-slide-img" alt="MrSport"></div>
+                <div class="carousel-slide" style="background: linear-gradient(135deg, #0d2211 0%, #0c1f24 100%); border-bottom: 1px solid #1e293b;"><img src="img/configuracion.png" class="carousel-slide-img" alt="MrSport"></div>
+                
+            
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="project-info">
+                <h3>Vhelth</h3>
+                <p class="project-desc">Plataforma web de atención médica a domicilio que facilita la búsqueda de médicos, la programación de citas y la gestión de pagos en efectivo o con tarjeta. Incorpora un chatbot impulsado por inteligencia artificial capaz de orientar al paciente, analizar sus síntomas y recomendar el médico más adecuado considerando su ubicación geográfica, optimizando así el proceso de atención médica.</p>
+                <div class="project-tags">
+                <span class="project-tag-mini">Java</span><span class="project-tag-mini">Spring Boot</span><span class="project-tag-mini">Spring Security</span><span class="project-tag-mini">Spring AI</span><span class="project-tag-mini">Hibernate</span><span class="project-tag-mini">MySQL</span><span class="project-tag-mini">Html</span><span class="project-tag-mini">Css</span><span class="project-tag-mini">JavaScript</span><span class="project-tag-mini">Bootstrap</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="#" class="p-btn demo disabled-btn" onclick="event.preventDefault();"><i class="fa-solid fa-lock"></i> Demo</a>
+                    <a href="#" class="p-btn code disabled-btn" onclick="event.preventDefault();"><i class="fa-solid fa-lock"></i> Código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="certificates-section" id="certificados">
+    <div class="section-tag">Logros profesionales</div>
+    <h2 class="section-title-main">Certificados y <span>Reconocimientos</span></h2>
+    <div class="section-subtitle">Validaciones académicas y de especialización técnica</div>
+
+    <div class="certificates-grid">
+        <div class="cert-card">
+            <div class="cert-img"><img src="img/certificado-Spring-Boot.png" alt="Certificado Java Backend"></div>
+            <div class="cert-info">
+                <h3 class="cert-title">Desarrollo de APIs en Java con Spring Boot</h3>
+                <span class="cert-issuer">TodoCode Academy</span>
+                <span class="cert-date">Emitido: 1 de abril de 2024</span>
+                <a href="https://drive.google.com/file/d/12Wd-90R5LctASEYFtDEQNzib1gCWnA8F/view?usp=drive_link" class="cert-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Credencial</a>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-img"><img src="img/Certificado-Microservicios.png" alt="Certificado Spring Boot"></div>
+            <div class="cert-info">
+                <h3 class="cert-title">Microservicios con Spring Cloud</h3>
+                <span class="cert-issuer">TodoCode Academy</span>
+                <span class="cert-date">Emitido: 23 de junio de 2025</span>
+                <a href="https://drive.google.com/file/d/1PgPiMzfs6Vp7phL-fbwOYQHQXiG_VHwd/view?usp=drive_link" class="cert-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Credencial</a>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-img"><img src="img/Reconocimiento-Gerra-de-codigo.jpeg" alt="Guerra de Códigos"></div>
+            <div class="cert-info">
+                <h3 class="cert-title">2.º Lugar – Concurso Guerra de Códigos</h3>
+                <span class="cert-issuer">Instituto Tecnológico de Apizaco</span>
+                <span class="cert-date">Otorgado: 4 de octubre de 2024</span>
+                <a href="https://drive.google.com/file/d/1Y7mmpUbosygjyUZmQUBrn-IIEtumxcGJ/view?usp=drive_link" class="cert-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Reconocimiento</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contacto">
+    <div class="section-tag">Contacto</div>
+    <h2 class="section-title-main">Vamos a <span>conectar</span></h2>
+    <div class="section-subtitle">¿Tienes un proyecto en mente? Hablemos.</div>
+
+    <div class="contact-layout">
+        <form class="contact-form-container" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nombre@correo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" placeholder="Oferta, proyecto o consulta" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" placeholder="Cuéntame cómo puedo ayudarte..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa-regular fa-paper-plane"></i> Enviar mensaje</button>
+        </form>
+
+        <div class="contact-sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-title">Otras formas de contacto</div>
+                <div class="direct-links">
+                    <a href="mailto:benjamincastaneda783@gmail.com" class="direct-box"><i class="fa-regular fa-envelope"></i> Abrir en tu cliente de correo</a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=benjamincastaneda783@gmail.com&tf=cm" target="_blank" class="direct-box"><i class="fa-brands fa-google"></i> Abrir directamente en Gmail</a>
+                    <a href="#" class="direct-box" id="copy-email-btn"><i class="fa-regular fa-copy"></i> Copiar dirección de email</a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-title">Redes</div>
+                <div class="social-icons">
+                    <a href="https://github.com/memin09" class="icon-wrapper"><div class="icon-box"><i class="fa-brands fa-github"></i></div><span>GitHub</span></a>
+                    <a href="https://www.instagram.com/benjamin.castaneda.79656?igsh=ZXEyc3JleHNwcmp6&utm_source=qr" class="icon-wrapper"><div class="icon-box"><i class="fa-brands fa-instagram"></i></div><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
   <script src="js/interantividad.js">
   </script>

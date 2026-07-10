@@ -1,211 +1,173 @@
-const skillCards = document.querySelectorAll(".skill-card");
-const aboutImg = document.querySelector(".about-img");
-const aboutText = document.querySelector(".about-text");
-const projectCards = document.querySelectorAll(".card");
-const certItems = document.querySelectorAll(".cert-item");
-const contactForm = document.querySelector(".contact");
+ // Lógica del Menú Hamburguesa (Abrir / Cerrar)
+    const menuBtn = document.getElementById('menu-btn');
+    const menuNav = document.getElementById('menu-nav');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      if (entry.target.classList.contains("skill-card")) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 150);
-      } else if (entry.target.classList.contains("card")) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 200);
-      } else if (entry.target.classList.contains("cert-item")) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 150);
-      } else {
-        entry.target.classList.add("show");
-      }
-    }
-  });
-}, { threshold: 0.2 });
-
-skillCards.forEach(card => observer.observe(card));
-observer.observe(aboutImg);
-observer.observe(aboutText);
-projectCards.forEach(card => observer.observe(card));
-certItems.forEach(item => observer.observe(item));
-observer.observe(contactForm);
-
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-  const frontBtn = card.querySelector('.card-front .toggle-btn');
-  const backBtn = card.querySelector('.card-back .toggle-btn');
-  
-  if (frontBtn) {
-    frontBtn.addEventListener('click', () => {
-      card.classList.add('flip');
+    menuBtn.addEventListener('click', () => {
+        menuNav.classList.toggle('open');
+        const icon = menuBtn.querySelector('i');
+        if (menuNav.classList.contains('open')) {
+            icon.className = 'fa-solid fa-xmark';
+        } else {
+            icon.className = 'fa-solid fa-bars';
+        }
     });
-  }
-  
-  if (backBtn) {
-    backBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      card.classList.remove('flip');
+
+    // Cerrar el menú automáticamente al hacer click en cualquier opción (Mobile)
+    const navLinks = document.querySelectorAll('#menu-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuNav.classList.contains('open')) {
+                menuNav.classList.remove('open');
+                menuBtn.querySelector('i').className = 'fa-solid fa-bars';
+            }
+        });
     });
-  }
-});
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
-
-document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    hamburger.classList.remove('active');
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
- 
-  document.body.style.overflowX = 'hidden';
-  
-  
-  document.documentElement.style.overflowX = 'hidden';
-  
-
-  document.body.style.width = '100vw';
-  document.documentElement.style.width = '100vw';
-});
-
-
-(function(){
-  const track = document.querySelector('.cert-track');
-  const items = Array.from(document.querySelectorAll('.cert-item'));
-  const total = items.length;
-  let index = 0;
-  let autoplayTimer = null;
-  const AUTO_MS = 3000;
-
-  function position() {
-    const W = track.clientWidth;
-    const baseOffset = Math.max(100, Math.round(W * 0.25));
-
-    items.forEach((el, i) => {
-      let delta = i - index;
-      const half = total / 2;
-      if (delta > half) delta -= total;
-      if (delta < -half) delta += total;
-
-      const absd = Math.abs(delta);
-
-      if (absd > 3) {
-        el.style.opacity = '0';
-        el.classList.add('far');
-        el.style.zIndex = 0;
-        el.style.transform = `translateX(calc(-50% + ${delta * baseOffset}px)) translateY(-50%) scale(0.5) rotateY(${delta<0?35:-35}deg)`;
-        return;
-      } else {
-        el.classList.remove('far');
-      }
-
-      const offsetX = delta * baseOffset;
-      const scale = delta === 0 ? 1 : Math.max(0.65, 1 - 0.15 * absd);
-      const rotate = delta === 0 ? 0 : (delta<0?20:-20);
-      const opacity = Math.max(0.2, 1 - 0.25 * absd);
-
-      el.style.zIndex = 100 - absd;
-      el.style.opacity = opacity;
-      el.classList.toggle('is-center', delta === 0);
-
-      el.style.transform = `translateX(calc(-50% + ${offsetX}px)) translateY(-50%) scale(${scale}) rotateY(${rotate}deg)`;
-    });
-  }
-
-  function next() {
-    index = (index + 1) % total;
-    position();
-  }
-
-  function startAuto(){ stopAuto(); autoplayTimer=setInterval(next, AUTO_MS); }
-  function stopAuto(){ if(autoplayTimer){ clearInterval(autoplayTimer); autoplayTimer=null; } }
-  function resetAuto(){ startAuto(); }
-
-  items.forEach((el, i) => {
-    el.addEventListener('click', () => {
-      if(i!==index){
-        index = i;
-        position();
-        resetAuto();
-      }
-    });
-  });
-
-  window.addEventListener('resize', position);
-
-  position();
-  startAuto();
-})();
-
-const form = document.getElementById("contactForm");
-const submitBtn = document.getElementById("submitBtn");
-const btnText = document.getElementById("btnText");
-const btnLoader = document.getElementById("btnLoader");
-const modalExito = document.getElementById("modalExito");
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  btnText.style.visibility = "hidden"; 
-  btnLoader.style.display = "flex";    
-
-  setTimeout(() => {
-    btnLoader.style.display = "none";
-    btnText.style.visibility = "visible"; 
-    form.reset();
-    modalExito.style.display = "flex";
-
-    setTimeout(() => {
-      modalExito.style.display = "none";
-    }, 3000);
-
-  }, 2000);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const heroTitle = document.querySelector('.hero-text h1 span');
-  
-  
-  heroTitle.style.animation = 'none';
-  heroTitle.offsetHeight; 
-  heroTitle.style.animation = null;
-  
-  if (window.innerWidth <= 400) {
-    heroTitle.style.animation = 'typing 3s steps(30, end) forwards, blink .75s step-end infinite';
-  }
-});
-
-window.addEventListener('resize', function() {
-  const heroTitle = document.querySelector('.hero-text h1 span');
-  
-  if (window.innerWidth <= 400) {
-   
-    heroTitle.style.animation = 'typing 3s steps(30, end) forwards, blink .75s step-end infinite';
-  } else if (window.innerWidth <= 768) {
-
-    heroTitle.style.animation = 'typing 4s steps(40, end) forwards, blink .75s step-end infinite';
-    heroTitle.style.whiteSpace = 'nowrap';
-    heroTitle.style.overflow = 'hidden';
-    heroTitle.style.borderRight = '.15em solid #005AD3';
-    heroTitle.style.width = '0';
-  } else {
+    // LÓGICA DE DETECCIÓN Y CONTROL DE CARRUSELES EN PROYECTOS
+    const previews = document.querySelectorAll('.project-preview');
     
-    heroTitle.style.animation = 'typing 4s steps(40, end) forwards, blink .75s step-end infinite';
-    heroTitle.style.whiteSpace = 'nowrap';
-    heroTitle.style.overflow = 'hidden';
-    heroTitle.style.borderRight = '.15em solid #005AD3';
-    heroTitle.style.width = '0';
-  }
-});
+    previews.forEach(preview => {
+        const track = preview.querySelector('.carousel-track');
+        const slides = preview.querySelectorAll('.carousel-slide');
+        const btnPrev = preview.querySelector('.carousel-btn.prev');
+        const btnNext = preview.querySelector('.carousel-btn.next');
+        const dotsContainer = preview.querySelector('.carousel-dots');
+        
+        let currentIndex = 0;
+        const maxIndex = slides.length - 1;
+
+        if (slides.length <= 1) {
+            if(btnPrev) btnPrev.style.display = 'none';
+            if(btnNext) btnNext.style.display = 'none';
+            return;
+        }
+
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+        const updateCarousel = () => {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentIndex);
+            });
+        };
+
+        btnPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+            updateCarousel();
+        });
+
+        btnNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+    });
+
+    // Control de iluminación de proyectos al hacer clic
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.p-btn') || e.target.closest('.carousel-btn')) return;
+            
+            if (card.classList.contains('active-glow')) {
+                card.classList.remove('active-glow');
+            } else {
+                projectCards.forEach(c => c.classList.remove('active-glow'));
+                card.classList.add('active-glow');
+            }
+        });
+    });
+
+    // CORREGIDO PARA MÓVILES: Copiar Email con soporte extendido para pantallas táctiles
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Asegura capturar el elemento correcto en móviles usando currentTarget
+            const buttonEl = e.currentTarget; 
+            const emailAddress = 'benjamincastaneda783@gmail.com';
+            
+            // Función interna para renderizar la respuesta visual exitosa
+            const showSuccessUI = () => {
+                const originalContent = buttonEl.innerHTML;
+                
+                // Muta el estado visual a verde de forma forzada
+                buttonEl.classList.add('copy-success');
+                buttonEl.innerHTML = '<i class="fa-solid fa-check"></i> Email copiado con éxito';
+                
+                // Dispara el mensaje Toast flotante en la pantalla inferior
+                let toast = document.getElementById('copy-toast');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.id = 'copy-toast';
+                    toast.className = 'toast-notification';
+                    document.body.appendChild(toast);
+                }
+                toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> Email copiado de manera correcta';
+                
+                setTimeout(() => toast.classList.add('show'), 50);
+                
+                // Revierte el estado tras 3 segundos
+                setTimeout(() => {
+                    buttonEl.classList.remove('copy-success');
+                    buttonEl.innerHTML = originalContent;
+                    toast.classList.remove('show');
+                }, 3000);
+            };
+
+            // Intento con la API nativa moderna de portapapeles
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(emailAddress)
+                    .then(showSuccessUI)
+                    .catch(err => fallbackCopy(emailAddress, showSuccessUI));
+            } else {
+                // Fallback clásico para navegadores web embebidos antiguos o móviles sin SSL activo
+                fallbackCopy(emailAddress, showSuccessUI);
+            }
+        });
+    }
+
+    // Fallback de copiado usando inputs invisibles (Indispensable para compatibilidad móvil total)
+    function fallbackCopy(text, successCallback) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed'; // Evita scroll visual
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            successCallback();
+        } catch (err) {
+            console.error('No se pudo copiar el texto', err);
+        }
+        document.body.removeChild(textArea);
+    }
+
+    // Resaltar enlace del menú según la sección activa en pantalla
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 160) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    });
